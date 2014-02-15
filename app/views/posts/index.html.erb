@@ -1,0 +1,50 @@
+<section id="main-content">
+  <div id="guts">
+
+    <h2 class="page-title">New Quote</h2><%= link_to 'Back', welcome_index_path %>
+    <div id="project">
+      <span class="quote">Quote# Q1234</span>
+
+      <h1>Listing posts</h1>
+
+      <table>
+        <tr>
+          <th>Title</th>
+          <th>Text</th>
+        </tr>
+
+        <% @posts.each do |post| %>
+            <tr>
+              <td><%= post.title %></td>
+              <td><%= post.text %></td>
+            </tr>
+        <% end %>
+      </table>
+
+      <div id="customer-demographics">Customer Demographics/Info
+        <p>Pulled from the database or entered</p>
+      </div>
+
+      <div id="job-desc">Description Of Job</div>
+
+      <div id="dates"><h2 class="page-title">Critical Dates</h2>
+
+        <p>
+          <label for="calendar">Quote Due:</label>
+          <select name="calendar" id="calendar">
+          </select>
+          <br>
+          <label for="calendar">Artwork/Layout Due:</label>
+          <select name="calendar" id="calendar">
+          </select>
+        <p>
+          <button class="submit" value="Submit">Submit</button>
+      </div>
+
+    </div>
+
+    <div style="clear:both;"></div>
+
+  </div>
+
+</section>
