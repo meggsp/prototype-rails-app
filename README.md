@@ -1,2 +1,2 @@
-prototype-rails-app
-===================
+prototype
+=========
