@@ -1,6 +1,10 @@
 class PostsController < ApplicationController
 	def new
-	end
+  end
+
+  def index
+    @post = Post.all
+  end
 
 	def create
 	    @post = Post.new(params[:post])

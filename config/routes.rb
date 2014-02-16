@@ -1,4 +1,6 @@
 Prototype::Application.routes.draw do
+  get "quotes/new_quote"
+  get "quotes/existing_quotes"
   get "page/existing_projects"
   get "page/pending_quotes"
   get "page/jobs_in_progress"
