@@ -1,4 +1,6 @@
 Prototype::Application.routes.draw do
+  resources :quotes
+
   get "quotes/new_quote"
   get "quotes/existing_quotes"
   get "page/existing_projects"

@@ -1,0 +1,32 @@
+<div id="project">
+  <span class="quote">Quote# Q1234</span><%= link_to 'Back', posts_path %>
+
+  <div id="customer-demographics">
+    <h2>Customer Demographics/Info</h2>
+    <%= @quote.description %>
+  </div>
+
+  <div id="job-desc">
+    <h2>Description Of Job</h2>
+    <%= @quote.description %>
+  </div>
+
+  <div id="dates"><h2 class="page-title">Critical Dates</h2>
+
+    <p>
+      <label for="calendar">Quote Due:</label>
+
+      </select>
+      <br>
+      <label for="calendar">Artwork/Layout Due:</label>
+
+      </select>
+    <p>
+  </div>
+  <div style="clear:both;"></div>
+
+</div>
+
+
+<%= link_to 'Edit', edit_quote_path(@quote) %> |
+<%= link_to 'Back', quotes_path %>

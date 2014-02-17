@@ -1,0 +1,24 @@
+<section id="main-content">
+  <div id="guts">
+
+    <h2 class="page-title">New Quote</h2>
+
+
+  <% @quotes.each do |quote| %>
+  <div id="quote">
+  <span class="quote-no"><a href="q-1234.php">Q#1234</a></span>
+  <span class="excerpt"><%= quote.description %><p>Excerpt... (->)</p></span>
+
+      <%= link_to 'Show', quote %>
+      <%= link_to 'Edit', edit_quote_path(quote) %>
+      <%= link_to 'Destroy', quote, method: :delete, data: { confirm: 'Are you sure?' } %>
+  </div>
+    <% end %>
+
+
+    <div style="clear:both;"></div>
+    <%= link_to 'Back', welcome_index_path %><%= link_to 'New Quote', new_quote_path %>
+  </div>
+
+
+</section>

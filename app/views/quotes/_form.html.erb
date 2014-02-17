@@ -1,0 +1,45 @@
+<h2 class="page-title">New Quote</h2><%= link_to 'Back', welcome_index_path %>
+<div id="project">
+
+
+
+  <%= form_for(@quote) do |f| %>
+      <% if @quote.errors.any? %>
+          <div id="error_explanation">
+            <h2><%= pluralize(@quote.errors.count, "error") %> prohibited this quote from being saved:</h2>
+
+            <ul>
+              <% @quote.errors.full_messages.each do |msg| %>
+                  <li><%= msg %></li>
+              <% end %>
+            </ul>
+          </div>
+      <% end %>
+
+      <div id="customer-demographics">Customer Demographics/Info
+        <%= f.text_area :description, size: "50x12" %>
+      </div>
+
+      <div id="job-desc">Description Of Job
+        <%= f.text_area :description, size: "50x12" %>
+      </div>
+
+      <div id="dates"><h2 class="page-title">Critical Dates</h2>
+
+        <p>
+          <label for="calendar">Quote Due:</label>
+          <%= select_date Date.today, prefix: :start_date %>
+          <br>
+          <label for="calendar">Artwork/Layout Due:</label>
+          <%= select_date Date.today, prefix: :start_date %>
+        <p>
+          <%= f.submit %>
+      </div>
+
+      </div>
+
+
+  <% end %>
+
+
+<div style="clear:both;"></div>

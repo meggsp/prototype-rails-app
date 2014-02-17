@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140215211545) do
+ActiveRecord::Schema.define(version: 20140217144348) do
 
   create_table "customer_master_ids", force: true do |t|
     t.string   "company_name"
@@ -71,6 +71,12 @@ ActiveRecord::Schema.define(version: 20140215211545) do
     t.date     "artwork_due_date"
     t.string   "artwork_proof_link"
     t.text     "quote_notes"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "quotes", force: true do |t|
+    t.string   "description"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

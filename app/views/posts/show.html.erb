@@ -25,11 +25,11 @@
 
         <p>
           <label for="calendar">Quote Due:</label>
-          <select name="calendar" id="calendar">
+          <%= select_date Date.today, prefix: :start_date %>
           </select>
           <br>
           <label for="calendar">Artwork/Layout Due:</label>
-          <select name="calendar" id="calendar">
+          <%= select_date Date.today, prefix: :start_date %>
           </select>
         <p>
           <button class="submit" value="Submit">Submit</button>
