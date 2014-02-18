@@ -1,6 +1,7 @@
 class QuotesController < ApplicationController
   before_action :set_quote, only: [:show, :edit, :update, :destroy]
 
+
   # GET /quotes
   # GET /quotes.json
   def index
@@ -61,6 +62,10 @@ class QuotesController < ApplicationController
     end
   end
 
+  def quote_params
+    params.require(:quote).permit(:description, :image)
+  end
+
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_quote
@@ -71,4 +76,6 @@ class QuotesController < ApplicationController
     def quote_params
       params.require(:quote).permit(:description)
     end
+
+
 end

@@ -52,4 +52,7 @@ end
 # gem 'debugger', group: [:development, :test]
 
 gem "heroku"
-gem 'thin'
+gem "thin"
+gem "paperclip", "~> 3.0"
+gem 'simple_form'
+gem 'sprockets-rails'

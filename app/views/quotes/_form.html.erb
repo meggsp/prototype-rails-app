@@ -33,6 +33,7 @@
           <label for="calendar">Artwork/Layout Due:</label>
           <%= select_date Date.today, prefix: :start_date %>
         <p>
+          <%= f.file_field :image, as: :file, label: "Upload an image" %>
           <%= f.submit %>
       </div>
 
